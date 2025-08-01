@@ -1,5 +1,5 @@
 // Types
-import { type Movie } from "../../types/types";
+import { type Movie } from "../../types/movie";
 
 // Styles
 import css from "./MovieGrid.module.css";

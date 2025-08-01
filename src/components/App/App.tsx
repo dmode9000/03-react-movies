@@ -15,7 +15,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 
 // Types
-import type { Movie } from "../../types/types";
+import type { Movie } from "../../types/movie";
 
 // Styles
 import "./App.module.css";
