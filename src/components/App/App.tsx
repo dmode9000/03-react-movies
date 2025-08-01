@@ -18,8 +18,7 @@ import Loader from "../Loader/Loader";
 import type { Movie } from "../../types/types";
 
 // Styles
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import css from "./App.module.css";
+import "./App.module.css";
 
 export default function App() {
   // стан завантаження, встановлюється перед виконанням запиту до АРІ
