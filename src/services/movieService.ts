@@ -10,10 +10,13 @@ interface ApiSearchResponse {
 
 export const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
 
-axios.defaults.baseURL = "https://api.themoviedb.org/3/search/";
-axios.defaults.headers.common["Authorization"] = "Bearer " + API_TOKEN;
-
 export async function fetchMovies(query: string): Promise<ApiSearchResponse> {
-  const response = await axios.get(`movie?query=${query}`);
+  const response = await axios.get<ApiSearchResponse>(`movie`, {
+    headers: { Authorization: `Bearer ${API_TOKEN}` },
+    baseURL: "https://api.themoviedb.org/3/search/",
+    params: {
+      query: query,
+    },
+  });
   return response.data;
 }
